@@ -39,6 +39,7 @@ Sebuah aplikasi sederhana untuk memanipulasi data seperti cread,read,update,dele
 ## Intruksi Menjalankan Aplikasi
 
 **Clone Repository:**
+
 `bash` -**[GitHub](git clone https://github.com/username/repository-name.git)**
 
 cd repositiry
@@ -54,10 +55,15 @@ cp .env.example .env
 **Konfigurasi .env: Buka file .env dan sesuaikan pengaturan database dengan konfigurasi lokal Anda. Contoh pengaturan:**
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=nama_database
+
 DB_USERNAME=root
+
 DB_PASSWORD=
 
 **Jalankan Migrasi Database: Buat tabel-tabel yang diperlukan dengan menjalankan migrasi:**
@@ -67,20 +73,29 @@ php artisan migrate
 **Jalankan Server:Mulai server pengembang laravel:**
 
 php artisan serve
+
 atau gunakan laragon sebagai alternatif
 
 **Akses Aplikasi**
 
 Halaman utama: '/'
+
 Halaman Daftar employee: /employees
+
 Formulir Tambah employee: /employees/add
+
 Formulir Edit employee: /employees/edit/{id}
+
 Pencarian data employee: Gunakan formulir pencarian di halaman daftar employee untuk mencari data berdasarkan umur atau kota tertentu
+
 Hapus data employee: Fitur untuk menghapus data employee berdasarkan id employee
 
 Halaman Daftar location: /location
+
 Formulir Tambah location: /location/add
+
 Formulir Edit location: /location/edit/{id}
+
 Hapus data location: Fitur untuk menghapus data lokasi berdasarkan id lokasi
 
 ### Catatan
