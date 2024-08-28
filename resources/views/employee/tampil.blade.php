@@ -23,7 +23,6 @@
                 @endforeach
               </select>
             </div>
-  
             <button type="submit" class="btn btn-primary">Search</button>
           </form>
           <div class="mb-4">
