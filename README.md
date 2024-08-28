@@ -7,60 +7,83 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Tes_Intern_Alita
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Sebuah aplikasi sederhana untuk memanipulasi data seperti cread,read,update,delete,dan search data berbasis web dengan php laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Struktur Aplikasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   **`app/`**: Berisi logika aplikasi utama.
+-   **`Http/Controllers/`**: Berisi controller aplikasi.
+-   **`Models/`**: Berisi model aplikasi.
+-   **`Providers/`**: Berisi provider layanan.
+-   **`config/`**: Berisi file konfigurasi aplikasi.
 
-## Learning Laravel
+-   **`database/`**: Berisi migrasi dan seed data.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    -   **`migrations/`**: Berisi file migrasi database.
+    -   **`seeds/`**: Berisi file seed data.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   **`public/`**: Berisi file publik seperti gambar, CSS, dan JavaScript.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   **`resources/`**: Berisi file view, bahasa, dan file sumber daya lainnya.
 
-## Laravel Sponsors
+    -   **`views/`**: Berisi template blade untuk tampilan.
+    -   **`lang/`**: Berisi file bahasa.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   **`routes/`**: Berisi file rute aplikasi.
 
-### Premium Partners
+-   **`storage/`**: Berisi file log dan file yang diunggah pengguna.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **`tests/`**: Berisi file pengujian aplikasi.
 
-## Contributing
+-   **`.env`**: File konfigurasi lingkungan aplikasi.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-   **`composer.json`**: File dependensi PHP.
 
-## Code of Conduct
+-   **`artisan`**: Command-line tool untuk Laravel.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Intruksi Menjalankan Aplikasi
 
-## Security Vulnerabilities
+**Clone Repository:**
+`bash` -**[GitHub](git clone https://github.com/username/repository-name.git)**
+cd repositiry
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**Instal Depedensi**
+composer install
 
-## License
+**Buat File Environment: Salin file .env.example menjadi .env**
+cp .env.example .env
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Konfigurasi .env: Buka file .env dan sesuaikan pengaturan database dengan konfigurasi lokal Anda. Contoh pengaturan:**
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+
+**Jalankan Migrasi Database: Buat tabel-tabel yang diperlukan dengan menjalankan migrasi:**
+php artisan migrate
+
+**Jalankan Server:Mulai server pengembang laravel:**
+php artisan serve
+atau gunakan laragon sebagai alternatif
+
+**Akses Aplikasi**
+Halaman utama: '/'
+Halaman Daftar employee: /employees
+Formulir Tambah employee: /employees/add
+Formulir Edit employee: /employees/edit/{id}
+Pencarian data employee: Gunakan formulir pencarian di halaman daftar employee untuk mencari data berdasarkan umur atau kota tertentu
+Hapus data employee: Fitur untuk menghapus data employee berdasarkan id employee
+
+Halaman Daftar location: /location
+Formulir Tambah location: /location/add
+Formulir Edit location: /location/edit/{id}
+Hapus data location: Fitur untuk menghapus data lokasi berdasarkan id lokasi
+
+### Catatan
+
+Pastikan Anda sudah menginstal PHP, Composer, dan MySQL di sistem Anda.
+Anda dapat menambahkan lebih banyak fitur atau menyesuaikan aplikasi sesuai dengan kebutuhan Anda.
