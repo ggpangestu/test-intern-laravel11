@@ -1,0 +1,25 @@
+input[type="number"] {
+    -moz-appearance: textfield; /* Untuk Firefox */
+    -webkit-appearance: none; /* Untuk Webkit browser */
+    appearance: none; /* Untuk browser lain */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.centered-content {
+    display: grid;
+    margin: 50px;
+    place-items: center; /* Menempatkan konten di tengah secara horizontal dan vertikal */
+    height: 50vh; /* Opsional: membuat container setinggi viewport */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+}
