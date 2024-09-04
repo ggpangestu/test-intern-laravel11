@@ -22,8 +22,13 @@ class EmployeeController extends Controller
         $locationCode = $request->input('city'); // Kode lokasi Jakarta
 
         $employeeQuery = DB::table('employee')
-            ->join('location', 'employee.location_code', '=', 'location.code')
-            ->select('employee.id', 'employee.employee_name', 'location.name', 'employee.birth_date');
+            ->leftjoin('location', 'employee.location_code', '=', 'location.code')
+            ->select(
+                'employee.id',
+                'employee.employee_name',
+                DB::raw('IFNULL(location.name, "N/A")AS name'),
+                'employee.birth_date'
+            );
 
         if (!empty($locationCode)) {
             $employeeQuery->where('employee.location_code', $locationCode);
